@@ -1,0 +1,118 @@
+/* GENERAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* DARK MODE */
+body.dark {
+    background: linear-gradient(135deg, #240046, #3c096c, #5a189a);
+    color: white;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: #e8e8e8;
+    color: #222;
+}
+
+/* THEME BUTTON */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle button {
+    padding: 8px 16px;
+    background: #ffdd57;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* TITLE */
+h1 {
+    margin-top: 40px;
+    font-size: 48px;
+}
+
+/* SCOREBOARD */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* GAME GRID */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 130px;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* LIGHT MODE CELL */
+body.light .cell {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* HOVER */
+.cell:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* STATUS */
+#status {
+    margin-top: 25px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* BUTTON */
+#resetBtn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff9e00;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#resetBtn:hover {
+    background: #ff7f00;
+}
+
+/* WINNING HIGHLIGHT */
+.win {
+    background: #00ffbf !important;
+    color: black;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #00ffbf; }
+    100% { box-shadow: 0 0 25px #00ffbf; }
+}
